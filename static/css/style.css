@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    background: linear-gradient(145deg, #e9eef3 0%, #dbe2ea 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Основная карточка */
+.contact-card {
+    max-width: 880px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 32px;
+    box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.25), 0 4px 12px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Шапка */
+.card-header {
+    background: #0a2b5e;
+    padding: 1.8rem 2rem;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.card-header h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    letter-spacing: -0.3px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.explanation {
+    font-size: 0.9rem;
+    opacity: 0.85;
+    margin-top: 0.25rem;
+}
+
+/* Контент */
+.card-content {
+    padding: 1.8rem 2rem 2rem 2rem;
+}
+
+/* Заголовки секций */
+.section-title {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #0a2b5e;
+    border-left: 4px solid #ffae00;
+    padding-left: 1rem;
+    margin: 1.5rem 0 1rem 0;
+}
+
+.section-title:first-of-type {
+    margin-top: 0;
+}
+
+/* Сетка для пар "метка — значение" */
+.info-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.info-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    background: #f8fafc;
+    border-radius: 20px;
+    padding: 0.9rem 1.2rem;
+    transition: background 0.2s;
+    border: 1px solid #eef2f8;
+}
+
+.info-row:hover {
+    background: #f1f5f9;
+    border-color: #dce3ec;
+}
+
+.info-label {
+    width: 220px;
+    font-weight: 600;
+    color: #1f3a6b;
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Иконки (эмодзи как заглушка, можно заменить на иконки) */
+.info-label::before {
+    content: "▹";
+    color: #ffae00;
+    font-weight: normal;
+}
+
+.info-value {
+    flex: 1;
+    color: #1e2f44;
+    word-break: break-word;
+    font-size: 0.95rem;
+}
+
+/* Ссылка */
+.link-wrapper {
+    margin-top: 1.2rem;
+    text-align: right;
+    border-top: 1px solid #eef2f8;
+    padding-top: 1.5rem;
+}
+
+.site-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #0a2b5e;
+    color: white;
+    text-decoration: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 40px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.site-link:hover {
+    background: #ffae00;
+    color: #0a2b5e;
+    transform: scale(0.98);
+    box-shadow: 0 6px 12px -8px rgba(0,0,0,0.2);
+}
+
+.organization {
+    background: #eef3fc;
+    padding: 1rem 1.5rem;
+    border-radius: 28px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #1f3a6b;
+    margin: 1rem 0 1.2rem 0;
+    border-left: 4px solid #ffae00;
+}
+
+/* простой адаптив */
+@media (max-width: 650px) {
+    .info-row {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .info-label {
+        width: 100%;
+    }
+    .card-content {
+        padding: 1.5rem;
+    }
+}
